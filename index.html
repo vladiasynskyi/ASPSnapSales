@@ -1,10 +1,6 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 <body>
-	<div align="center">
-		<img src="https://www.aspit.no/wp-content/uploads/2019/08/aspit_logo_horizontal_rgb-267x122.png" height="42">
-		<h2 style="color:#0f4631;"> Embedded Service Code Snipped </h2>
-	</div>
-	
-<style type='text/css'>
+	<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #4C9E92;
 		font-family: "Salesforce Sans", sans-serif;
@@ -44,17 +40,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://aspit--aspittest.my.salesforce.com',
-			'https://aspittest-aspit.cs129.force.com/listener',
+			'https://aspit--aspitdev.my.salesforce.com',
+			'https://aspitdev-aspit.cs128.force.com/listener',
 			gslbBaseURL,
-			'00D3O0000008jax',
+			'00D3N0000000uuU',
 			'Sales_Chat',
 			{
 				baseLiveAgentContentURL: 'https://c.la2-c1cs-cdg.salesforceliveagent.com/content',
 				deploymentId: '5722p000000PRIP',
-				buttonId: '5733O00000000AG',
+				buttonId: '5733N00000000ES',
 				baseLiveAgentURL: 'https://d.la2-c1cs-cdg.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3O0000004CiDUAU_174e8f5a651',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3N0000004CG4UAM_174f990f285',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -62,7 +58,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://aspit--aspittest.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://aspit--aspitdev.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
