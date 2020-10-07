@@ -28,16 +28,14 @@
 		embedded_svc.settings.disabledMinimizedText = 'Offline';
     		embedded_svc.settings.loadingText = 'Laster';
 		
-		embedded_svc.settings.extraPrechatFormDetails = [{
-		  "label": "Case Origin",
-		  "value": "Chat",
-		  "displayToAgent": false
-		}];
+		
+		
+		
 		
 		embedded_svc.settings.extraPrechatInfo = [{
 		  "entityName": "Contact",
 		  "showOnCreate": true,
-		  "saveToTranscript": "ContactId",
+		  "saveToTranscript": "Contact",
 		  "entityFieldMaps": [{
 		    "isExactMatch": true,
 		    "fieldName": "Email",
@@ -48,7 +46,7 @@
 		},{
 		  "entityName": "Lead",
 		  "showOnCreate": true,
-		  "saveToTranscript": "LeadId",
+		  "saveToTranscript": "Lead",
 		  "entityFieldMaps": [
 		  {
 		    "isExactMatch": true,
@@ -56,7 +54,26 @@
 		    "doCreate": false,
 		    "doFind": true,
 		    "label": "Email"
-		  }]
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "FirstName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "First Name"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "LastName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Last Name"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "Company",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Company"
+		  }
+		  ]
 		}];
 
 		
