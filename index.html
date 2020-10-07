@@ -23,13 +23,89 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true;
-		//embedded_svc.settings.language = 'no';
+		embedded_svc.settings.language = 'no';
 		embedded_svc.settings.defaultMinimizedText = 'Live Chat';
 		embedded_svc.settings.disabledMinimizedText = 'Offline';
     		embedded_svc.settings.loadingText = 'Laster';
 		
 		
-		
+		embedded_svc.settings.extraPrechatInfo = [{
+		  "entityName": "Contact",
+		  "showOnCreate": true,
+		  "saveToTranscript": "Contact",
+		  "entityFieldMaps": [{
+		    "isExactMatch": true,
+		    "fieldName": "Email",
+		    "doCreate": false,
+		    "doFind": true,
+		    "label": "E-post"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "FirstName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Fornavn"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "LastName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Etternavn"
+		  }]
+		},{
+		  "entityName": "Case",
+		  "showOnCreate": true,
+		  "saveToTranscript": "",
+		  "entityFieldMaps": [
+		  {
+		    "isExactMatch": false,
+		    "fieldName": "Origin",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Case Origin"
+		  }, {
+		    "isExactMatch": false,
+		    "fieldName": "Subject",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Emne"
+		  }, {
+		    "isExactMatch": false,
+		    "fieldName": "SuppliedEmail",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "E-post"
+		  }, {
+		    "isExactMatch": false,
+		    "fieldName": "SuppliedName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Fornavn"
+		  }]
+		},{
+		  "entityName": "Lead",
+		  "saveToTranscript": "Lead",
+		  "entityFieldMaps": [
+		  {
+		    "isExactMatch": true,
+		    "fieldName": "Email",
+		    "doCreate": false,
+		    "doFind": true,
+		    "label": "E-post"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "FirstName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Fornavn"
+		  },{
+		    "isExactMatch": false,
+		    "fieldName": "LastName",
+		    "doCreate": false,
+		    "doFind": false,
+		    "label": "Etternavn"
+		  }]
+		}];
 		
 		
 		embedded_svc.settings.extraPrechatInfo = [{
